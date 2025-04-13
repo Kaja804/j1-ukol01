@@ -13,7 +13,21 @@ public class HlavniProgram {
         zofka = new Turtle();
 
         //TODO implementace domácího úkolu
-        nakresliPrasatko();
+        nakresliOsmiuhelnik();
+        zofka.penUp();
+        zofka.turnRight(90);
+        zofka.move(200);
+        zofka.turnLeft(90);
+        zofka.move(25);
+        zofka.penDown();
+        nakresliKruh();
+        zofka.penUp();
+        zofka.turnRight(90);
+        zofka.move(200);
+        zofka.penDown();
+        zofka.turnLeft(90);
+        nakresliSlunce();
+
     }
 
     public void nakresliPrasatko() {
@@ -54,6 +68,31 @@ public class HlavniProgram {
         zofka.turnRight(120);
         zofka.move(100);
         zofka.turnLeft(60);
+    }
+    public void nakresliOsmiuhelnik (){
+        for (int i = 0; i < 8; i++) {
+            zofka.move(50);
+            zofka.turnRight(45);
+        }
+    }
+    public void nakresliKruh (){
+        for (int i = 0; i < 72; i++) {
+            zofka.move(5);
+            zofka.turnRight(5);
+        }
+    }
+    public void nakresliSlunce () {
+        for (int i = 0; i < 12; i++) {
+            for (int j = 0; j < 6; j++) {
+                zofka.move(5);
+                zofka.turnRight(5);
+            }
+            zofka.turnLeft(90);
+            zofka.move(30);
+            zofka.turnRight(180);
+            zofka.move(30);
+            zofka.turnLeft(90);
+        }
     }
 
 }
